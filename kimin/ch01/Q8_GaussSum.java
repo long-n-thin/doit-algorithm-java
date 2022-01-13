@@ -10,7 +10,7 @@ class Q8_GaussSum {
         System.out.print("n: ");
         int n = sc.nextInt();
 
-        System.out.println("1부터 " + n + "까지의 합은 " + gaussSum(n) + "입니다.");
+        System.out.printf("1부터 %d까지의 합은 %d입니다.", n, gaussSum(n));
     }
 
     private static int gaussSum(int n) {

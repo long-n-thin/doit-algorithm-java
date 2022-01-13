@@ -14,8 +14,8 @@ class Q9_Sumof {
         System.out.print("b: ");
         int b = sc.nextInt();
 
-        System.out.println(a + "와 " + b + " 사이 정수의 합은 " + sumofWhile(a, b) + "입니다.");
-        System.out.println(sumofFormula(a, b));
+        System.out.printf("%d와 %d 사이 정수의 합은 %d입니다.\n", a, b, sumofWhile(a, b));
+        System.out.printf("가우스의 덧셈 공식 이용: %d", sumofFormula(a, b));
     }
 
     private static int sumofWhile(int a, int b) {

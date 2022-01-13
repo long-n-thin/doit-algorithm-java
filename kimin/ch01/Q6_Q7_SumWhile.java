@@ -10,7 +10,7 @@ class Q6_Q7_SumWhile {
         System.out.print("n: ");
         int n = sc.nextInt();
         
-        System.out.println("1부터 " + n + "까지 합은 " + sumWhile(n) + "입니다.");
+        System.out.printf("1부터 %d까지 합은 %d입니다.", n, sumWhile(n));
     }
 
     private static int sumWhile(int n) {
