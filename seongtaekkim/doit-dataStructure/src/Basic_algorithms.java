@@ -2,13 +2,21 @@ public class Basic_algorithms {
 
 
     public Basic_algorithms() {
-        System.out.println(max4(4,2,1,6));
+/*        System.out.println(max4(4,2,1,6));
 
         System.out.println(median(3,1,7));
         System.out.println(med3(3,1,7));
         System.out.println(ex6(10));
         System.out.println(ex7(10));
         System.out.println(sumof(-1,10));
+
+
+        ex10(3,3);
+        ex10(2,6);*/
+        System.out.println(ex11(334234));;
+/*        System.out.println(ex11(5));
+        ex1213("*");
+        ex1213("+");*/
 
 
     }
@@ -124,6 +132,7 @@ public class Basic_algorithms {
     }
 
     /**
+     * exercise 6
      * find argument+1 value
      * @param n
      * @return
@@ -142,6 +151,7 @@ public class Basic_algorithms {
      * excercise 7
      * sum : 1+2+3+4+ ...
      * @param n
+     *
      * @return
      */
     public int ex7(int n) {
@@ -184,4 +194,115 @@ public class Basic_algorithms {
         return n*(a+max)/2;
     }
 
+
+    /**
+     * excercise 10
+     *
+     * @param a
+     * @param b
+     */
+    public void ex10(int a, int b) {
+        if(b <= a) {
+            System.out.println("Enger a value greater then a");
+        } else {
+            System.out.println("b-a is " + (b-a));
+        }
+    }
+
+    /**
+     * excercise 11
+     *
+     * @param n
+     * @return
+     */
+    public String ex11(int n) {
+        if(n <= 0) {
+            return "Enter a positive integer";
+        }
+
+        String str = Integer.toString(n);
+        char[] digits = str.toCharArray();
+        return "That number is " + digits.length ;
+    }
+
+    /**
+     * excercise 12, 13
+     * 9*9 gogodan print, sum print
+     */
+    public void ex1213(String operation) {
+
+        System.out.print("  |");
+        for(int dan=1 ; dan<=9 ; dan++) {
+            System.out.printf("%3d",dan);
+        }
+        System.out.println();
+        for(int dan=1 ; dan<=30 ; dan++) {
+            if(dan == 3) {
+                System.out.print("+");
+            } else{
+                System.out.print("-");
+            }
+        }
+        System.out.println();
+        for(int row=1 ; row<=9 ; row++) {
+            System.out.print(row + " |");
+            for(int col=1; col<=9 ; col++){
+                if("+".equals(operation))
+                    System.out.printf("%3d",row + col);
+                else if("*".equals(operation)) {
+                    System.out.printf("%3d",row * col);
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    /**
+     * exercise 14
+     * 입력한 수의 개수만큼 * 문자로 정사각형을 만들어라
+     *
+     * @param n
+     */
+    public void ex14(int n) {
+
+        for(int i=0 ;i<n ; i++) {
+            for(int j=0 ; j<n ; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
