@@ -6,6 +6,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-        new Basic_algorithms();
+        //new Basic_algorithms();
+        new Basic_datastructure();
     }
 }
