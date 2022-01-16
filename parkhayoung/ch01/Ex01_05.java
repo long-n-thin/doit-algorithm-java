@@ -1,4 +1,4 @@
-package 박하영.ch01;
+package ch01;
 
 public class Ex01_05 {
 	// Q5. 중앙값을 구하는 2개의 메서드 중 1번이 더 효율적인 이유는 무엇인가?

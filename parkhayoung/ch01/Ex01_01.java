@@ -1,4 +1,4 @@
-package 박하영.ch01;
+package ch01;
 
 public class Ex01_01 {
 	//Q1. 네 값의 최댓값을 구하는 m4 메서드를 작성한다.

@@ -1,4 +1,4 @@
-package ¹ÚÇÏ¿µ.ch01;
+package ch01;
 
 public class Ex01_13 {
 	

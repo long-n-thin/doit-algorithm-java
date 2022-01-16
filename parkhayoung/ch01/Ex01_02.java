@@ -1,4 +1,4 @@
-package 박하영.ch01;
+package ch01;
 
 public class Ex01_02 {
 	// Q2. 세 값의 최솟값을 구하는 min3 메서드를 작성한다.
