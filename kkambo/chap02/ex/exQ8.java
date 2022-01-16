@@ -1,8 +1,9 @@
-package kkambo.chap02;
+package kkambo.chap02.ex;
 
 import java.util.Scanner;
 
-public class exQ9 {
+public class exQ8 {
+
     static int[][] mdays = {
             {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},//평년
             {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},//윤년
@@ -13,16 +14,13 @@ public class exQ9 {
         return (year % 4 == 0 && year % 100 !=0 || year % 400 == 0) ? 1: 0;
     }
 
-    static int leftDayOfYear(int y, int m, int d){
-        int days = mdays[isLeap(y)][m-1] - d;
+    static int dayOfYear(int y, int m, int d){
 
-        System.out.println("days = " + days);
+        do{
+            d += mdays[isLeap(y)][--m];
+        }while(m > 1);
 
-        while(m < 12) {
-            days += mdays[isLeap(y)][m++];
-        }
-
-        return days;
+        return d;
     }
 
     public static void main(String[] args) {
@@ -35,7 +33,7 @@ public class exQ9 {
         System.out.print("일 : ");
         int day = stdIn.nextInt();
 
-        System.out.printf("그 해 %d 일째입니다.", leftDayOfYear(year, month, day));
+        System.out.printf("그 해 %d 일째입니다.", dayOfYear(year, month, day));
     }
 
 }

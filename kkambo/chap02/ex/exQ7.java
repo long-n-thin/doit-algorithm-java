@@ -1,4 +1,4 @@
-package kkambo.chap02;
+package kkambo.chap02.ex;
 
 import java.util.Scanner;
 
