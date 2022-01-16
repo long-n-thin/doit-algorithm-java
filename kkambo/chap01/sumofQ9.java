@@ -1,4 +1,4 @@
-package chap01;
+package kkambo.chap01;
 
 public class sumofQ9 {
     public static void main(String[] args) {

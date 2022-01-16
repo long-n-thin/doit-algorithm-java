@@ -1,4 +1,4 @@
-package chap02;
+package kkambo.chap02;
 
 public class CloneArray {
     public static void main(String[] args) {
@@ -18,8 +18,5 @@ public class CloneArray {
         for( int i : b){
             System.out.println(i);
         }
-
-        System.out.println("a.length = " + a.length);
-
     }
 }

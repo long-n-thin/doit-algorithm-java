@@ -1,4 +1,4 @@
-package chap02;
+package kkambo.chap02;
 
 public class intArray {
     public static void main(String[] args) {
