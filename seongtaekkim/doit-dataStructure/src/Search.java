@@ -7,7 +7,7 @@ public class Search {
          * 03-1 search algorithms
          */
 
-        /**
+        /** 
          * 03-2 linear search
          */
         q1();
