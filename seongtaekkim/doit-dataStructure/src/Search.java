@@ -15,12 +15,15 @@ public class Search {
         /**
          * 03-3 binary search
          */
-        int[] a = new int[]{1,3,7,6,3,7,1,4,7};
+/*        int[] a = new int[]{1,3,7,6,3,7,1,4,7};
         int n = a.length;
         int key = 7;
         int[] idx =  null;
         System.out.println(searchIdx(a,n,key,idx));
-        System.out.println(idx[2]);
+        System.out.println(idx[2]);*/
+
+
+        q5();
     }
 
     /**
@@ -61,6 +64,17 @@ public class Search {
         }
 
     }
+
+
+    /**
+     * q3 find smallest index in binary search
+     */
+    private void q5() {
+        new BinSearch();
+    }
+
+
+
 }
 
 class SeqSearchSen {
@@ -135,7 +149,7 @@ class BinSearch {
         System.out.print("search value : ");
         int ky = stdIn.nextInt();
 
-        int idx = binSearch(x,num,ky);
+        int idx = binSearchX(x,num,ky);
         if(idx == -1){
             System.out.println("not value");
         } else {
@@ -160,6 +174,30 @@ class BinSearch {
         return -1;
     }
 
+    private int binSearchX(int[] a, int n, int key) {
+        int pl =0;
+        int pr = n -1;
 
+        do{
+            int pc = (pl + pr) /2;
+            if(a[pc] == key) {
+
+                while(pc > 0) {
+                    if(a[pc-1] == key) {
+                        pc--;
+                    } else {
+                        break;
+                    }
+                }
+                return pc;
+
+            } else if(a[pc] < key)
+                pl = pc+1;
+            else
+                pr = pc-1;
+        } while(pl <= pr);
+
+        return -1;
+    }
 
 }
