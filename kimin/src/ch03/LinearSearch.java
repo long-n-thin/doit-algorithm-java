@@ -1,6 +1,7 @@
 package ch03;
 
 import java.util.Random;
+import java.util.stream.IntStream;
 
 import static common.CommonFunction.printArr;
 
@@ -9,14 +10,36 @@ import static common.CommonFunction.printArr;
  */
 public class LinearSearch {
     /**
-     * @param length 배열의 길이
+     * @param length 배열 길이
+     * @param bound  배열에 들어갈 수 있는 최대값
      * @param value  찾고자 하는 값
      */
-    public static void run(int length, int value) {
+    public static void run(int length, int bound, int value) {
         int[] arr = new int[length];
-
         insertRandomNumber(arr);
-        search(arr, value);
+
+        // Java 8
+        int[] arr1 = IntStream.generate(() -> new Random().nextInt(bound) + 1).distinct().limit(length).toArray();
+        int[] arr2 = new Random().ints(1, bound).distinct().limit(length).toArray();
+
+        showSearchResult(arr, value);
+        showSearchResult(arr1, value);
+        showSearchResult(arr2, value);
+    }
+
+    /**
+     * @param arr   탐색할 배열
+     * @param value 찾고자 하는 값
+     */
+    private static void showSearchResult(int[] arr, int value) {
+        int index = search(arr, value);
+
+        if (index == -1) {
+            System.out.println("The element " + value + " is not found.");
+        } else {
+            System.out.println("The element " + value + " is found at the index : " + index);
+        }
+
         printArr(arr);
     }
 
@@ -40,18 +63,17 @@ public class LinearSearch {
     }
 
     /**
-     * @param arr   선형검색 할 배열
+     * @param arr   탐색할 배열
      * @param value 찾고자 하는 값
-     * @return 배열에 찾으려는 값이 있으면 인덱스를, 없으면 1을 반환
+     * @return 배열에 찾고자 하는 값이 있으면 인덱스를, 없으면 -1을 반환
      */
     private static int search(int[] arr, int value) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == value) {
-                System.out.println("The element is found at the index : " + arr[i]);
                 return i;
             }
         }
-        System.out.println("The element " + value + " is not found.");
+
         return -1;
     }
 }
