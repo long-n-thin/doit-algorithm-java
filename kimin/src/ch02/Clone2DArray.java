@@ -1,11 +1,7 @@
-package doit_algorithm_java.ch02;
+package ch02;
 
 public class Clone2DArray {
     public static void run(int[] arr, int[][] arr2d) {
-        clone2dArray(arr, arr2d);
-    }
-
-    private static void clone2dArray(int[] arr, int[][] arr2d) {
         int[] arrClone = arr.clone();
 
         System.out.println("a: " + arr);

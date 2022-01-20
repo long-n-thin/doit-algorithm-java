@@ -1,4 +1,4 @@
-package doit_algorithm_java.ch02;
+package ch02;
 
 public class ReverseArray {
     public static void run(int[] arr) {

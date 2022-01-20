@@ -1,6 +1,10 @@
-package doit_algorithm_java.ch01;
+package ch01;
 
-public class Sumof {
+/**
+ * Q9: a와 b 사이 정수의 합 구하기
+ * p.30
+ */
+public class SumBetween {
     public static void run(int a, int b) {
         System.out.println("a와 b 사이 정수의 합 구하기");
 

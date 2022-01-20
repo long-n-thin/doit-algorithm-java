@@ -1,4 +1,4 @@
-package doit_algorithm_java.ch02;
+package ch02;
 
 import java.util.Random;
 import java.util.stream.IntStream;
