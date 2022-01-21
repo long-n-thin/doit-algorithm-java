@@ -13,8 +13,12 @@ public class Main {
 
         // Java 8
         int[] arr2 = IntStream.generate(() -> new Random().nextInt(bound) + 1).distinct().limit(length).toArray();
+        int[] sortedArr = new Random().ints(1, bound).distinct().limit(length).sorted().toArray();
 
         new LinearSearch(arr, value);
         new LinearSearch(arr2, value);
+
+        new LinearSearch(sortedArr, value);
+        new BinarySearch(sortedArr, value);
     }
 }
