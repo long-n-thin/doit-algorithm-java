@@ -9,6 +9,12 @@ public class Main {
         int bound = length * 2;
         int value = 7;
 
-        LinearSearch.run(length, bound, value);
+        int[] arr = new int[length];
+
+        // Java 8
+        int[] arr2 = IntStream.generate(() -> new Random().nextInt(bound) + 1).distinct().limit(length).toArray();
+
+        new LinearSearch(arr, value);
+        new LinearSearch(arr2, value);
     }
 }
