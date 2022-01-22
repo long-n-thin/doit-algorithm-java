@@ -2,6 +2,7 @@ package ch03;
 
 import java.util.Random;
 
+import static common.CommonFunction.printArr;
 import static common.CommonFunction.showSearchResult;
 
 public class LinearSearch {
@@ -16,8 +17,10 @@ public class LinearSearch {
 
         this.arr = arr;
         this.value = value;
+    }
 
-        showSearchResult(search(), arr, value, count);
+    public void run() {
+        showSearchResult(search(), this.arr, this.value, this.count);
     }
 
     private void insertRandomNumber(int[] arr) {
@@ -40,15 +43,41 @@ public class LinearSearch {
      * @return 배열에 찾고자 하는 값이 있으면 인덱스를, 없으면 -1을 반환
      */
     private int search() {
-        for (int i = 0; i < arr.length; i++) {
-            count++;
+        for (int i = 0; i < this.arr.length; i++) {
+            // Q2
+            printArr(this.arr, i);
+            this.count++;
 
-            if (arr[i] == value) {
+            if (this.arr[i] == this.value) {
                 return i;
             }
         }
-        count++;
 
         return -1;
+    }
+
+    /**
+     * Q3
+     */
+    public void searchIdx() {
+        int cnt = 0;
+        int i = 0;
+        int j = 0;
+        int[] idxArr = new int[this.arr.length];
+
+        while (i < this.arr.length) {
+            if (this.arr[i] == this.value) {
+                idxArr[j++] = i;
+                cnt++;
+            }
+            i++;
+        }
+
+        System.out.println("Looking for: " + this.value);
+        System.out.print("Given array: ");
+        printArr(this.arr);
+        System.out.print("Found index: ");
+        printArr(idxArr);
+        System.out.println("Value found: " + cnt);
     }
 }
