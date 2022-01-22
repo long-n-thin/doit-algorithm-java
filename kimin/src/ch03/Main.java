@@ -18,7 +18,11 @@ public class Main {
         new LinearSearch(arr, value);
         new LinearSearch(arr2, value);
 
-        new LinearSearch(sortedArr, value);
-        new BinarySearch(sortedArr, value);
+        new LinearSearch(sortedArr, value).run();
+        // TODO: Q4 현재 검색중인 요소의 범위 표시(p.117)
+        new BinarySearch(sortedArr, value).run();
+
+        // TODO: Q6 검색 실패시 삽입 포인트 값 출력(p.121)
+        new BinarySearch(sortedArr, value).javalib();
     }
 }
