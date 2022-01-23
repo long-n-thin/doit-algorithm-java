@@ -1,11 +1,7 @@
-package kimin.ch01;
+package ch01;
 
-class Q16_Pyramid {
-    public static void main(String[] args) {
-		printPyramid(5);
-    }
-
-	private static void printPyramid(int n) {
+class Pyramid {
+    public static void run(int n) {
 		for (int i = 1; i <= n; i++) {
 			for (int j = 1; j <= n - i; j++)
 				System.out.print(' ');

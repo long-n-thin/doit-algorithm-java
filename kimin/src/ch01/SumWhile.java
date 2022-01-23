@@ -1,16 +1,12 @@
-package kimin.ch01;
+package ch01;
 
-import java.util.Scanner;
-
-class Q6_Q7_SumWhile {
-    public static void main(String[] args) {
-        System.out.println("1부터 n까지 합 구하기");
-        
-        Scanner sc = new Scanner(System.in);
-        System.out.print("n: ");
-        int n = sc.nextInt();
-        
-        System.out.printf("1부터 %d까지 합은 %d입니다.", n, sumWhile(n));
+/**
+ * Q6, Q7
+ * 1부터 n까지 합 구하기
+ */
+class SumWhile {
+    public static void run(int n) {
+        System.out.printf("while문: 1부터 %d까지 합은 %d입니다.", n, sumWhile(n));
     }
 
     private static int sumWhile(int n) {
