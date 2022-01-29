@@ -3,7 +3,9 @@ import java.util.Scanner;
 public class Stack {
 
     public Stack() {
-        new IntStack2TrackTester();
+        new IntStackTester();
+        //new GenericStackTester();
+        //new IntStack2TrackTester();
     }
 }
 
@@ -42,7 +44,7 @@ class IntStack {
     public int pop() throws EmptyIntStackException {
         if(ptr <= 0 )
             throw new EmptyIntStackException();
-        return stk[ptr--];
+        return stk[--ptr];
     }
 
     public int peek() throws EmptyIntStackException {
@@ -86,6 +88,170 @@ class IntStack {
     }
 
 }
+
+
+
+class EmptyIntStackException extends RuntimeException {
+    public EmptyIntStackException() {}
+}
+
+class OverFlowIntStackException extends RuntimeException {
+    public OverFlowIntStackException() {};
+}
+
+class GenericStack<E> {
+    private int max;
+    private int ptr;
+    private E[] stk;
+
+
+    @SuppressWarnings("uncheck")
+    public GenericStack(int capacity) {
+        ptr = 0;
+        max = capacity;
+        try {
+            stk = (E[]) new Object[max];
+        } catch(OutOfMemoryError e) {
+            max = 0;
+        }
+    }
+
+    public E push(E x) throws OverFlowIntStackException {
+        if(ptr >= max) {
+            throw new OverFlowIntStackException();
+        }
+        return stk[ptr++] = x;
+    }
+
+    public E pop() throws EmptyIntStackException {
+        if(ptr <= 0 )
+            throw new EmptyIntStackException();
+        return stk[--ptr];
+    }
+
+    public E peek() throws EmptyIntStackException {
+        if(ptr <= 0)
+            throw new EmptyIntStackException();
+        return stk[ptr -1];
+    }
+
+    public int indexOf(E x) {
+        for(int i=ptr-1 ; i>=0 ; i--) {
+            if(x.equals(stk[i]))
+                return i;
+        }
+        return -1;
+    }
+    public void clear() {
+        ptr = 0;
+    }
+    public int capacity() {
+        return max;
+    }
+
+    public int size() {
+        return ptr;
+    }
+    public boolean isEmpty() {
+        return ptr <= 0;
+    }
+
+    public boolean isFull() {
+        return ptr>=max;
+    }
+    public void dump() {
+        if(ptr<=0) {
+            System.out.println("stack is empty");
+        } else {
+            for(int i=0; i<ptr ; i++)
+                System.out.print(stk[i] + " ");
+            System.out.println();
+        }
+    }
+
+}
+
+/**
+ * q2 stack to generic stack
+ */
+class GenericStackTester {
+
+    public GenericStackTester() {
+        Scanner stdIn = new Scanner(System.in);
+        GenericStack<String> s = new GenericStack<>(16);
+
+        while(true) {
+            System.out.println("current size is " +s.size() + "/" + s.capacity());
+            System.out.println("(0)exit (1)push (2)pop (3)peek (4)dump (5)indexOf (6)clear (7)isEmpty (8)isFull");
+
+            int menu = stdIn.nextInt();
+            if(menu == 0)
+                break;
+            String x=null;
+            switch(menu) {
+                case 1:
+                    System.out.println("data : ");
+                    x = stdIn.next();
+                    try {
+                        s.push(x);
+                    } catch(IntStack.OverFlowIntStackException e) {
+                        System.out.println("stack is full");
+                    }
+                    break;
+                case 2:
+                    try {
+                        x = s.pop();
+                        System.out.println("pop data is " + x);
+                    } catch(IntStack.EmptyIntStackException e) {
+                        System.out.println("stack is empty");
+                    }
+                    break;
+                case 3:
+                    try {
+                        x = s.peek();
+                        System.out.println("peak data is " + x);
+                    } catch(IntStack.EmptyIntStackException e) {
+                        System.out.println("stack is empty");
+                    }
+                    break;
+                case 4:
+                    s.dump();
+                    break;
+                case 5:
+                    System.out.print("find data : ");
+                    String data = stdIn.next();
+                    int idx = s.indexOf(data);
+                    if(idx == -1 ) {
+                        System.out.println("not data");
+                    } else {
+                        System.out.println("index num is " + idx);
+                    }
+                    break;
+                case 6:
+                    s.clear();
+                    break;
+                case 7:
+                    if(s.isEmpty()) {
+                        System.out.println("stack is empty");
+                    } else {
+                        System.out.println("stack is not empty");
+                    }
+                    break;
+                case 8:
+                    if(s.isFull()) {
+                        System.out.println("stack is full");
+                    } else {
+                        System.out.println("stack is not full");
+                    }
+                    break;
+                default :
+                    break;
+            }
+        }
+
+    }
+}
+
 
 class IntStack2Track {
     public int max;
