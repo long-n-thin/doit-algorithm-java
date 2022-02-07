@@ -30,5 +30,29 @@ public class Main {
 
         // TODO: Q6 검색 실패시 삽입 포인트 값 출력(p.121)
         new BinarySearch(sortedArr, value).javalib();
+
+        // TODO: Q7 시력 내림차순 정렬에서 특정 시력 가진 사람 검색(p.129)
+        PhysicsData[] data = {
+                new PhysicsData("John", 170, 1.2),
+                new PhysicsData("Jane", 164, 0.8),
+                new PhysicsData("Cheolsu", 167, 1.5),
+                new PhysicsData("Choi", 155, 1.0),
+                new PhysicsData("Leah", 172, 0.5),
+        };
+
+        PhysicsExam exam = new PhysicsExam();
+//        exam.searchHeight(data, 167);
+//        exam.searchHeight(data, 170);
+//        exam.searchHeight(data, 164);
+        exam.searchHeight(data, 155);
+//        exam.searchHeight(data, 180);   // no result
+//        exam.searchHeight(data, 172);
+
+        exam.searchVision(data, 0.8);
+//        exam.searchVision(data, 1.5);
+//        exam.searchVision(data, 0.5);
+//        exam.searchVision(data, 0.9);   // no result
+//        exam.searchVision(data, 1.2);
+//        exam.searchVision(data, 1.0);
     }
 }
