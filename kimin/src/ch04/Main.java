@@ -1,7 +1,5 @@
 package ch04;
 
-import java.util.LinkedList;
-
 public class Main {
     public static void main(String[] args) {
 //        IntStack stack = new IntStack(4);
@@ -48,20 +46,36 @@ public class Main {
 //        System.out.println("14 peek: " + stack.peek());
 
         // TODO: Q4 선형 큐(p.146)
-        IntArrayQueue arrq = new IntArrayQueue(5);
-        System.out.println("capacity: " + arrq.capacity());
-        System.out.println("isEmpty: " + arrq.isEmpty());
-        arrq.enqueue(1);
-        int dq = arrq.dequeue();
-        System.out.println("dequeue: " + dq);
-        arrq.enqueue(2);
-        arrq.enqueue(3);
-        arrq.enqueue(4);
-        System.out.println("isFull: " + arrq.isFull());
-        System.out.println("peek: " + arrq.peek());
-        System.out.println("dump: " + arrq.dump());
-        arrq.clear();
-        System.out.println("dump: " + arrq.dump());
-        arrq.dequeue();
+//        IntArrayQueue arrq = new IntArrayQueue(5);
+//        System.out.println("capacity: " + arrq.capacity());
+//        System.out.println("isEmpty: " + arrq.isEmpty());
+//        arrq.enqueue(1);
+//        int dq = arrq.dequeue();
+//        System.out.println("dequeue: " + dq);
+//        arrq.enqueue(2);
+//        arrq.enqueue(3);
+//        arrq.enqueue(4);
+//        System.out.println("isFull: " + arrq.isFull());
+//        System.out.println("peek: " + arrq.peek());
+//        System.out.println("dump: " + arrq.dump());
+//        arrq.clear();
+//        System.out.println("dump: " + arrq.dump());
+//        arrq.dequeue();
+
+        IntCircularQueue cq = new IntCircularQueue(5);
+
+        cq.enqueue(1);
+        cq.enqueue(2);
+        cq.dequeue();
+        cq.enqueue(3);
+        cq.dequeue();
+        cq.enqueue(4);
+        cq.dequeue();
+        cq.enqueue(5);
+        System.out.println(cq.peek());
+        cq.enqueue(6);
+        cq.enqueue(7);
+        cq.enqueue(8);
+        cq.dump();
     }
 }
