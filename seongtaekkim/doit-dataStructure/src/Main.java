@@ -13,6 +13,6 @@ public class Main {
         //new Basic_algorithms();
         //new Basic_datastructure();
         //new Search();
-        new Stack();
+       // new Stack();
     }
 }

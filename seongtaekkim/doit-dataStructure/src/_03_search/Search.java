@@ -1,3 +1,5 @@
+package _03_search;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -387,7 +389,6 @@ class PhysExamSearch {
         }
 
         public static final Comparator<PhyscData> VISION_ORDER = new VisionOrderComparator();
-
         private static class VisionOrderComparator implements Comparator<PhyscData> {
             /**
              *
