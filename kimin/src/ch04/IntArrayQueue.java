@@ -1,7 +1,5 @@
 package ch04;
 
-import java.util.Arrays;
-
 public class IntArrayQueue {
     private int max;
     private int num;
@@ -53,7 +51,7 @@ public class IntArrayQueue {
                 q[i] = q[i + 1];
             }
         }
-        num--;
+        q[--num] = 0;
 
         return front;
     }
@@ -67,7 +65,7 @@ public class IntArrayQueue {
     }
 
     public void clear() {
-        Arrays.fill(q, 0);
+        q = new int[max];
         num = 0;
     }
 

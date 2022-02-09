@@ -48,7 +48,7 @@ public class Main {
 //        System.out.println("14 peek: " + stack.peek());
 
         // TODO: Q4 선형 큐(p.146)
-        IntArrayQueue arrq = new IntArrayQueue(4);
+        IntArrayQueue arrq = new IntArrayQueue(5);
         System.out.println("capacity: " + arrq.capacity());
         System.out.println("isEmpty: " + arrq.isEmpty());
         arrq.enqueue(1);
