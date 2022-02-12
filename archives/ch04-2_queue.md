@@ -70,6 +70,8 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/e
 
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/exam/IntQueue_04_05.java
 
+링버퍼는 들어온 지 오래된 값을 버리는 데 유용하다.
+
 # 참고 영상
 
 https://youtu.be/BdsyG5yP1cQ?list=LL
