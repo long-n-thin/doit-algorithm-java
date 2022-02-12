@@ -7,8 +7,12 @@
 데이터를 꺼내는 쪽을  front
 데이터를 넣는 쪽을 rear
 
+배열로 구현한 큐
+https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/exam/IntAryQueue_04_04.java
 
 링 버퍼 : 배열의 처음이 끝과 연결되었다고 보는 자료구조
+링 버퍼로 구현한 큐
+https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/exam/IntAryQueue_04_04.java
 
 큐 클래스 IntQueue
 
@@ -28,4 +32,10 @@
 큐가 비어 있는지 검사하는 메소드 IsEmpty
 큐가 가득 찼는지 검사하는 메서드 IsFull
 큐안에 모든 데이터를 표시하는 메서드 dump
+
+인큐 상한이 정해져 있지 않은 링버퍼 큐
+https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/exam/IntQueue_04_05.java
+
+참고 영상
+https://youtu.be/BdsyG5yP1cQ?list=LL
 
