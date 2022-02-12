@@ -75,4 +75,20 @@ public class IntCircularQueue {
         }
         System.out.println();
     }
+
+    /**
+     * Q5 임의의 데이터 검색
+     *
+     * @param value 찾을 데이터 값
+     * @return 있으면 데이터가 있는 인덱스 반환, 없으면 -1 반환
+     */
+    public int search(int value) {
+        for (int i = 0; i < num; i++) {
+            if (value == q[(i + front) % max]) {
+                return (i + front) % max;
+            }
+        }
+
+        return -1;
+    }
 }

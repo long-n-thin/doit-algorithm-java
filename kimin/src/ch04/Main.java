@@ -72,10 +72,13 @@ public class Main {
         cq.enqueue(4);
         cq.dequeue();
         cq.enqueue(5);
-        System.out.println(cq.peek());
+        System.out.println("peek: " + cq.peek());
         cq.enqueue(6);
         cq.enqueue(7);
         cq.enqueue(8);
         cq.dump();
+        // TODO: Q5 임의의 데이터 검색 함수
+        int value = 6;
+        System.out.println("search for " + value + " index at: " + cq.search(value));
     }
 }
