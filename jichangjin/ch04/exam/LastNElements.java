@@ -3,7 +3,7 @@ package jichangjin.ch04.exam;
 import java.util.Scanner;
 // 원하는 개수만큼 값을 입력 받아 요솟수 N인 배열에 마지막 N개를 저장
 
-class LastNElements {
+public class LastNElements {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		final int N = 10;
