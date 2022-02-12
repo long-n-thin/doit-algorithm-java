@@ -23,8 +23,9 @@ public class SizeOf  {
             // Instantiate your data here and assign it to object
 
             //object = new Object ();
-            object = new Integer (i);
-            //object = new Integer[4];
+          //  object = new Integer (i);
+           //object = new Integer[4];
+            object = new Integer[4][1];
             //object = new Long (i);
             //object = new String ();
           //  object = new byte [128][1];

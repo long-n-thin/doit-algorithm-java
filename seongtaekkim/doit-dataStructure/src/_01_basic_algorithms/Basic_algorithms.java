@@ -1,3 +1,5 @@
+package _01_basic_algorithms;
+
 public class Basic_algorithms {
 
 
@@ -13,10 +15,10 @@ public class Basic_algorithms {
 
         ex10(3,3);
         ex10(2,6);*/
-        System.out.println(ex11(334234));;
-/*        System.out.println(ex11(5));
+      //  System.out.println(ex11(334234));;
+    //    System.out.println(ex11(5));
         ex1213("*");
-        ex1213("+");*/
+        ex1213("+");
 
 
     }
