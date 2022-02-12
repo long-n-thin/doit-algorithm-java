@@ -71,3 +71,20 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/e
 
 https://youtu.be/BdsyG5yP1cQ?list=LL
 
+# 큐 관련 문제들
+
+1. 큐 기본 문제 1
+
+https://www.acmicpc.net/problem/2164
+
+2. 큐 기본 문제 2
+
+https://www.acmicpc.net/problem/1158
+
+3. 우선 순위 큐 문제 
+
+https://www.acmicpc.net/problem/1966
+
+
+
+
