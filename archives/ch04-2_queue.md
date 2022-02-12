@@ -78,13 +78,19 @@ https://youtu.be/BdsyG5yP1cQ?list=LL
 
 https://www.acmicpc.net/problem/2164
 
+https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/practice/Card2_2164.java
+
 2. 큐 기본 문제 2
 
 https://www.acmicpc.net/problem/1158
 
+https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/practice/Josephus_11866.java
+
 3. 우선 순위 큐 문제 
 
 https://www.acmicpc.net/problem/1966
+
+https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/practice/PrinterQueue_1966.java
 
 
 
