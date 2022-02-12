@@ -6,6 +6,8 @@ public class IntQueue_04_05 {
 	private int rear; // 맨 뒤 커서
 	private int num; // 현재의 데이터 수
 	private int[] que; // 큐의 본체
+	
+	/* front는 rear를 따라잡을 수 있지만 rear 이상이 될 수는 없다 */
 
 	// 실행할 때 예외：큐가 비어 있음
 	public class EmptyIntQueueException extends RuntimeException {
@@ -36,8 +38,10 @@ public class IntQueue_04_05 {
 			throw new OverflowIntQueueException(); // 큐가 가득 참
 		que[rear++] = x;
 		num++;
-		if (rear == max)
+		if (rear == max) {
+			/* 디큐한 자리를 리어가 차지(update 개념) */
 			rear = 0;
+		}
 		return x;
 	}
 
@@ -45,7 +49,7 @@ public class IntQueue_04_05 {
 	public int deque() throws EmptyIntQueueException {
 		if (num <= 0)
 			throw new EmptyIntQueueException(); // 큐가 비어 있음
-		int x = que[front++];
+		int x = que[front++]; // front ++ 를 통해 front가 증가하면서 이전 값은 삭제된 것처럼 된다.
 		num--;
 		if (front == max)
 			front = 0;
