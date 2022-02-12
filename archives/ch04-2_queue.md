@@ -13,7 +13,7 @@
 데이터를 넣는 쪽을 rear
 
 
-#배열로 구현한 큐
+# 배열로 구현한 큐
 
 (디큐 시 배열의 모든 요소를 앞으로 옮겨야 하는 단점이 있다)
 
@@ -23,13 +23,14 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/e
 
 링 버퍼 : 배열의 처음이 끝과 연결되었다고 보는 자료구조
 
-#링 버퍼로 구현한 큐
+# 링 버퍼로 구현한 큐
 
 (시간 복잡도는 O(1) 이지만 크기가 정해져 있다는 단점이 있다)
 
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/exam/IntAryQueue_04_04.java
 
-큐 클래스 IntQueue
+
+# 큐 클래스 IntQueue
 
 1. 큐로 사용할 배열 que
 
@@ -62,7 +63,7 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/e
 큐안에 모든 데이터를 표시하는 메서드 dump
 
 
-#나머지 연산을 통해 인큐 상한을 두지 않은 링버퍼 큐
+# 나머지 연산을 통해 인큐 상한을 두지 않은 링버퍼 큐
 
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/exam/IntQueue_04_05.java
 
