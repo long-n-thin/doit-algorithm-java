@@ -21,9 +21,10 @@
 
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/exam/IntAryQueue_04_04.java
 
-링 버퍼 : 배열의 처음이 끝과 연결되었다고 보는 자료구조
 
 # 링 버퍼로 구현한 큐
+
+링 버퍼 : 배열의 처음이 끝과 연결되었다고 보는 자료구조
 
 (시간 복잡도는 O(1) 이지만 크기가 정해져 있다는 단점이 있다)
 
