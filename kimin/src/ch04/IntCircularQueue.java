@@ -57,6 +57,10 @@ public class IntCircularQueue {
     }
 
     public int peek() {
+        if (isEmpty()) {
+            throw new QueueEmptyException();
+        }
+
         return q[front];
     }
 
@@ -66,7 +70,7 @@ public class IntCircularQueue {
 
     public void clear() {
         q = new int[max];
-        num = 0;
+        num = front = rear = 0;
     }
 
     public void dump() {
