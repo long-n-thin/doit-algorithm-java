@@ -43,9 +43,9 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/e
 
 5. 현재 데이터 수 num
 
-인큐 메서드 enque 인큐에 성공하면 인큐한 값을 그래도 반환합니다.
+인큐 메서드 enque 인큐에 성공하면 인큐한 값을 그대로 반환합니다.
 
-디큐 메서드 deque  큐에서 데이터를 디큐하고 그 값을 반한하는 메서드 입니다.
+디큐 메서드 deque  큐에서 데이터를 디큐하고 그 값을 반환하는 메서드 입니다.
 
 피크 메서드 peek 
 
