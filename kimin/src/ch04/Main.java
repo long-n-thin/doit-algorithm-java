@@ -62,23 +62,42 @@ public class Main {
 //        System.out.println("dump: " + arrq.dump());
 //        arrq.dequeue();
 
-        IntCircularQueue cq = new IntCircularQueue(5);
+//        IntCircularQueue cq = new IntCircularQueue(5);
+//
+//        cq.enqueue(1);
+//        cq.enqueue(2);
+//        cq.dequeue();
+//        cq.enqueue(3);
+//        cq.dequeue();
+//        cq.enqueue(4);
+//        cq.dequeue();
+//        cq.enqueue(5);
+//        System.out.println("peek: " + cq.peek());
+//        cq.enqueue(6);
+//        cq.enqueue(7);
+//        cq.enqueue(8);
+//        cq.dump();
+//        // TODO: Q5 임의의 데이터 검색 함수
+//        int value = 6;
+//        System.out.println("search for " + value + " index at: " + cq.search(value));
 
-        cq.enqueue(1);
-        cq.enqueue(2);
-        cq.dequeue();
-        cq.enqueue(3);
-        cq.dequeue();
-        cq.enqueue(4);
-        cq.dequeue();
-        cq.enqueue(5);
-        System.out.println("peek: " + cq.peek());
-        cq.enqueue(6);
-        cq.enqueue(7);
-        cq.enqueue(8);
-        cq.dump();
-        // TODO: Q5 임의의 데이터 검색 함수
-        int value = 6;
-        System.out.println("search for " + value + " index at: " + cq.search(value));
+        // TODO: Q6 제네릭 큐 클래스
+        GQueue<String> gq = new GQueue<>(5);
+        System.out.println("isEmpty: " + gq.isEmpty());
+        gq.enqueue("hello");
+        gq.enqueue("world");
+        System.out.println("isEmpty: " + gq.isEmpty());
+        gq.enqueue("lovely day");
+        gq.enqueue("nice");
+        System.out.println("peek: " + gq.peek());
+        String dq = gq.dequeue();
+        System.out.println("dequeue: " + dq);
+        System.out.println("peek: " + gq.peek());
+        gq.dequeue();
+        gq.dequeue();
+        gq.enqueue("to");
+        gq.enqueue("meet");
+        gq.enqueue("you");
+        gq.dump();
     }
 }
