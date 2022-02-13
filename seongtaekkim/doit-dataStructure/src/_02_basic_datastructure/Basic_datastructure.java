@@ -1,3 +1,5 @@
+package _02_basic_datastructure;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -55,6 +57,7 @@ public class Basic_datastructure {
             arr[i] = arr[arr.length-1-i];
             arr[arr.length-1-i] = tmp;
         }
+
         arrayPrint(arr);
 
     }
@@ -240,6 +243,8 @@ public class Basic_datastructure {
 
     private void q11() {
         System.out.println(new YMD(2020,12,15).after(365).toString());;
+
+
         System.out.println(new YMD(2022,1,15).before(365).toString());;
     }
 
@@ -248,11 +253,30 @@ public class Basic_datastructure {
      * @param arr
      */
     private void arrayPrint(int[] arr) {
+        //Integer[]
+
+        //int[]
+
         for(int i=0 ; i<arr.length ; i++)  {
             System.out.printf("%3d",arr[i]);
         }
         System.out.println();
     }
+
+    private void arrayPrint(Integer[] arr) {
+        //Integer[]
+
+        //int[]
+        if(arr instanceof Integer[]) {
+
+        }
+
+        for(int i=0 ; i<arr.length ; i++)  {
+            System.out.printf("%3d",arr[i]);
+        }
+        System.out.println();
+    }
+
 
     /**
      * char array print
@@ -325,6 +349,7 @@ class PhysicalExamination {
         for(int i=0 ; i<vdistToStar.length ; i++) {
             vdistToStar[i] = "";
         }
+
 
         System.out.println("phycical examination");
         System.out.println("name    height vision");

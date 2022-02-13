@@ -14,20 +14,37 @@ public class DataType {
         int int1;
         Integer int2 = null;
         Integer[] intArr = null;
-        System.out.println(int2.BYTES);
+        //System.out.println(int2.BYTES);
 
         Integer data1 = 100;
-        function1(data1);
-        function1("data");
+        String data2 = "data";
+        long beforeTime = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
+
+
+
+        for(int i=0 ; i<1000000000 ; i++) {
+            function1(data1);
+            function1(data2);
+        }
+        long afterTime = System.currentTimeMillis(); // 코드 실행 후에 시간 받아오기
+        long secDiffTime = (afterTime - beforeTime); //두 시간에 차 계산
+        System.out.println("secDiffTime : " + secDiffTime);
+
     }
 
     public static void function1(Object data) {
         if(data instanceof Integer) {
-            System.out.println((Integer)data+5);
         } else if(data instanceof String) {
-            System.out.println((String)data+5);
         }
     }
+
+/*
+    public static void function1(int data) {
+    }
+    public static void function1(String data) {
+    }*/
+
+
 
 }
 

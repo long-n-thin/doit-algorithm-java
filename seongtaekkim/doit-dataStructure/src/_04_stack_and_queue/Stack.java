@@ -1,3 +1,5 @@
+package _04_stack_and_queue;
+
 import java.util.Scanner;
 
 public class Stack {
