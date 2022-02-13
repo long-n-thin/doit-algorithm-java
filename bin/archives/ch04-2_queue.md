@@ -24,7 +24,9 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/e
 
 # 링 버퍼로 구현한 큐
 
-링 버퍼 : 배열의 처음이 끝과 연결되었다고 보는 자료구조
+링 버퍼 : 배열의 처음이 끝과 연결되었다고 보는 자료구조 
+
+(디큐 시 실제로 데이터를 지우는 것이 아니라 지웠다고 가정)
 
 (시간 복잡도는 O(1) 이지만 크기가 정해져 있다는 단점이 있다)
 
@@ -67,6 +69,8 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/e
 # 나머지 연산을 통해 인큐 상한을 두지 않은 링버퍼 큐
 
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch04/exam/IntQueue_04_05.java
+
+링버퍼는 들어온 지 오래된 값을 버리는 데 유용하다.
 
 # 참고 영상
 
