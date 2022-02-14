@@ -28,17 +28,31 @@ public class EuclidGCD {
 
     /**
      * 배열 a의 모든 요소의 최대공약수를 구하는 다음 메서드를 작성하세요.
+     * solution : n개의 자연수에 대해 n-1번 최대공약수를 구한다.
      * @param a
      * @return
      */
     static int gcdArray(int[] a) {
+        if(a.length < 1)
+            return -1;
+        if(a.length == 1)
+            return a[0];
 
-    return 1;
+        int x = a[0];
+        int tmp = 0;
+        for(int i=1 ; i<a.length ; i++) {
+            while(a[i]!=0){
+                tmp = x % a[i];
+                x = a[i];
+                a[i] = tmp;
+            }
+        }
+        return x;
     }
 
     public static void main(String[] args) {
-        Scanner stdIn = new Scanner(System.in);
-
+        /*Scanner stdIn = new Scanner(System.in);
+        System.out.println(4%6);
         System.out.println("두 정수의 최대공약수");
         System.out.print("첫번째 정수 입력 : ");
         int x = stdIn.nextInt();
@@ -46,7 +60,9 @@ public class EuclidGCD {
         int y = stdIn.nextInt();
 
         System.out.println("최대공약수는 " + gcd(x,y) + "입니다.");
-        System.out.println("최대공약수는 " + gcd2(x,y) + "입니다.");
+        System.out.println("최대공약수는 " + gcd2(x,y) + "입니다.");*/
+        int[] data = new int[]{1,8,4};
+        System.out.println("최대공약수는 " + gcdArray(data) + "입니다.");
 
     }
 }
