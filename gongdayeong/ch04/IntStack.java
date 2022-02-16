@@ -1,4 +1,4 @@
-package ch04;
+package gongdayeong.ch04;
 
 public class IntStack {
 	private int max;
