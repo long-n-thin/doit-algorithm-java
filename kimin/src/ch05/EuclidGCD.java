@@ -1,5 +1,7 @@
 package ch05;
 
+import java.util.Optional;
+
 public class EuclidGCD {
     public int gcdRecursion(int x, int y) {
         return (y == 0) ? x : gcdRecursion(y, x % y);
@@ -16,17 +18,13 @@ public class EuclidGCD {
     }
 
     public int gcdArray(int[] arr) {
-        if (arr.length == 1) {
-            return arr[0];
-        } else {
-            int res = gcdIter(arr[0], arr[1]);
+        int res = gcdIter(arr[0], (arr.length > 1) ? arr[1] : 0);
 
-            for (int i = 2; i < arr.length; i++) {
-                res = gcdIter(res, arr[i]);
-            }
-
-            return res;
+        for (int i = 2; i < arr.length - 1; i++) {
+            res = gcdIter(res, arr[i]);
         }
+
+        return res;
     }
 
     public int gcdArraySol(int[] arr, int i, int length) {
