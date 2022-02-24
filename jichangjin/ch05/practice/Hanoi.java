@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
  
 public class Hanoi {
- 
+	static int cnt;
 	static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
  
 	public static void main(String[] args) throws IOException {
@@ -15,9 +15,11 @@ public class Hanoi {
  
 		int N = Integer.parseInt(br.readLine());
  
-		bw.write((int) (Math.pow(2, N) - 1) + "\n");
+//		bw.write((int) (Math.pow(2, N) - 1) + "\n");
  
 		Hanoi(N, 1, 2, 3);
+		
+		System.out.println(cnt);
 		
 		bw.flush();
 		bw.close();
@@ -31,6 +33,7 @@ public class Hanoi {
 	 */
  
 	public static void Hanoi(int N, int start, int mid, int to) throws IOException {
+		cnt++;
 		// 이동할 원반의 수가 1개라면?
 		if (N == 1) {
 			bw.write(start + " " + to + "\n");
