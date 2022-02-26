@@ -14,13 +14,16 @@ https://www.youtube.com/watch?v=Xu5GC_7YIeQ
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/practice/MakeColorPaper.java
 
 # N-Queen
-1. 가지뻗기
-(경우의 수 나열)
-https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/exam/QueenB.java
 
 가지 뻗기에 의해 조합을 줄이는 것을 한정 조합이라고 하고,
 
 가지 뻗기와 한정 조작을 조합하여 문제를 풀어가는 방법을 분기 한정법이라고 한다.
+
+
+1. 가지뻗기
+(경우의 수 나열)
+https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/exam/QueenB.java
+
 
 2. 분기한정법
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/practice/EightQueen.java
