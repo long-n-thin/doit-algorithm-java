@@ -21,8 +21,8 @@ public class Hanoi {
 		
 		System.out.println(cnt);
 		
-		bw.flush();
-		bw.close();
+//		bw.flush();
+//		bw.close();
 	}
  
 	/*
@@ -34,9 +34,9 @@ public class Hanoi {
  
 	public static void Hanoi(int N, int start, int mid, int to) throws IOException {
 		cnt++;
-		// 이동할 원반의 수가 1개라면?
+		// 이동할 원반의 수가 1개라면? (종료조건)
 		if (N == 1) {
-			bw.write(start + " " + to + "\n");
+			System.out.println(start + " " + to);
 			return;
 		}
  
@@ -45,7 +45,8 @@ public class Hanoi {
 		Hanoi(N - 1, start, to, mid);
     
 		// STEP 2 : 1개를 A에서 C로 이동 (= start 지점의 N번째 원판을 to지점으로 옮긴다.)
-		bw.write(start + " " + to + "\n");
+//		bw.write(start + " " + to + "\n");
+		System.out.println(start + " " + to);
     
 		// STEP 3 : N-1개를 B에서 C로 이동 (= mid 지점의 N-1개의 원판을 to 지점으로 옮긴다.)
 		Hanoi(N - 1, mid, start, to);
