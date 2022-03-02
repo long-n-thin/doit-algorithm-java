@@ -1,6 +1,5 @@
 package _05_recursion;
 
-import javax.imageio.stream.ImageInputStream;
 import java.util.Scanner;
 
 public class Hanoi {
