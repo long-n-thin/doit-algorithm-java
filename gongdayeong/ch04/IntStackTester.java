@@ -1,4 +1,4 @@
-package ch04;
+package gongdayeong.ch04;
 
 import java.util.Scanner;
 
@@ -8,9 +8,9 @@ public class IntStackTester {
 		IntStack s = new IntStack(64);
 		
 		while(true) {
-			System.out.println("ÇöÀç µ¥ÀÌÅÍ ¼ö : "+s.size()+"/"+s.capacity());
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ : "+s.size()+"/"+s.capacity());
 			
-			System.out.print("(1)Çª½Ã (2)ÆË (3)ÇÇÅ© (4)´ýÇÁ (0)Á¾·á : ");
+			System.out.print("(1)Çªï¿½ï¿½ (2)ï¿½ï¿½ (3)ï¿½ï¿½Å© (4)ï¿½ï¿½ï¿½ï¿½ (0)ï¿½ï¿½ï¿½ï¿½ : ");
 			
 			int menu = stdIn.nextInt();
 			if(menu == 0) break;
@@ -18,30 +18,30 @@ public class IntStackTester {
 			int x;
 			switch(menu) {
 			case 1:
-				System.out.print("µ¥ÀÌÅÍ:");
+				System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:");
 				x=stdIn.nextInt();
 				try {
 					s.push(x);
 				} catch (IntStack.OverflowIntStackException e) {
-					System.out.println("½ºÅÃÀÌ °¡µæ Ã¡½À´Ï´Ù.");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¡ï¿½ï¿½ï¿½Ï´ï¿½.");
 				}
 				break;
 				
 			case 2:
 				try {
 					x = s.pop();
-					System.out.println("ÆËÇÑ µ¥ÀÌÅÍ´Â " + x + "ÀÔ´Ï´Ù.");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ " + x + "ï¿½Ô´Ï´ï¿½.");
 				}catch (IntStack.EmptyIntStackException e) {
-					System.out.println("½ºÅÃÀÌ ºñ¾îÀÌ½À´Ï´Ù.");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Ï´ï¿½.");
 				}
 				break;
 				
 			case 3:
 				try {
 					x = s.peek();
-					System.out.println("ÇÇÅ©ÇÑ µ¥ÀÌÅÍ´Â " + x + "ÀÔ´Ï´Ù.");
+					System.out.println("ï¿½ï¿½Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ " + x + "ï¿½Ô´Ï´ï¿½.");
 				}catch (IntStack.EmptyIntStackException e) {
-					System.out.println("½ºÅÃÀÌ ºñ¾îÀÌ½À´Ï´Ù.");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Ï´ï¿½.");
 				}
 				break;
 				
