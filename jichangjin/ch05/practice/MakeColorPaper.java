@@ -15,7 +15,7 @@ public class MakeColorPaper {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(br.readLine());
-		int arr[][] = new int[N][N];
+		arr = new int[N][N];
 		
 		for(int i = 0; i < N; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
