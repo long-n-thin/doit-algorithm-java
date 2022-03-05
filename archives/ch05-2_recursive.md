@@ -26,6 +26,7 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/p
 
 가지 뻗기와 한정 조작을 조합하여 문제를 풀어가는 방법을 분기 한정법이라고 한다.
 
+https://www.youtube.com/watch?v=ltm-JX5R1pA
 
 1. 가지뻗기
 (경우의 수 나열)
