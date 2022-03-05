@@ -23,6 +23,7 @@ public class QueenB {
 					print();
 				else {
 					flag[j] = true; // 차일드 노드를 호출하기 전 현재 확정된 퀸의 위치
+					// ex : flag[0] = true, 현재 퀸이 0행에 위치함
 					set(i + 1); // 다음 열에 퀸을 배치합니다.
 					flag[j] = false; // 차일드 노드를 호출한 다음에는 해당 행의 퀸의 위치 초기화
 				}

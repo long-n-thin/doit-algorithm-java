@@ -14,6 +14,10 @@ https://www.youtube.com/watch?v=Xu5GC_7YIeQ
 
 
 # 색종이 만들기
+https://drive.google.com/file/d/1qKEm75EYCrx7UTepv5SbHvhZ2lqRrZ35/view?usp=sharing
+
+![image](https://user-images.githubusercontent.com/75921378/156897036-f5fb9832-27ff-45fa-97dc-1f20fd5a2416.png)
+
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/practice/MakeColorPaper.java
 
 # N-Queen
@@ -22,8 +26,13 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/p
 
 가지 뻗기와 한정 조작을 조합하여 문제를 풀어가는 방법을 분기 한정법이라고 한다.
 
+https://www.youtube.com/watch?v=ltm-JX5R1pA
 
 1. 가지뻗기
+
+![image](https://user-images.githubusercontent.com/75921378/156899310-f64691f5-2ed0-43e9-89f2-2c824b2a3af4.png)
+
+
 (경우의 수 나열)
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/exam/QueenB.java
 
