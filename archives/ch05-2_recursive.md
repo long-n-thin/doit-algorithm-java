@@ -14,6 +14,10 @@ https://www.youtube.com/watch?v=Xu5GC_7YIeQ
 
 
 # 색종이 만들기
+https://drive.google.com/file/d/1qKEm75EYCrx7UTepv5SbHvhZ2lqRrZ35/view?usp=sharing
+
+![image](https://user-images.githubusercontent.com/75921378/156897036-f5fb9832-27ff-45fa-97dc-1f20fd5a2416.png)
+
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/practice/MakeColorPaper.java
 
 # N-Queen
