@@ -29,6 +29,10 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/p
 https://www.youtube.com/watch?v=ltm-JX5R1pA
 
 1. 가지뻗기
+
+![image](https://user-images.githubusercontent.com/75921378/156899310-f64691f5-2ed0-43e9-89f2-2c824b2a3af4.png)
+
+
 (경우의 수 나열)
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch05/exam/QueenB.java
 
