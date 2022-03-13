@@ -35,8 +35,7 @@ public class CommonFunction {
     public static void printArr(int[] arr, int start, int mid, int end) {
         System.out.print("[");
 
-        int i = 0;
-        for (i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             if (i == start) {
                 System.out.print("<-");
             }
@@ -72,5 +71,11 @@ public class CommonFunction {
 
         printArr(arr, index);
         System.out.println();
+    }
+
+    public static void swap(int[] arr, int idx1, int idx2) {
+        int temp = arr[idx1];
+        arr[idx1] = arr[idx2];
+        arr[idx2] = temp;
     }
 }
