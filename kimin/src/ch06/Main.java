@@ -15,5 +15,8 @@ public class Main {
 
         SelectionSort ss = new SelectionSort();
         ss.sort(a);
+
+        InsertionSort is = new InsertionSort();
+        is.sort(a);
     }
 }
