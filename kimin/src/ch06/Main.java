@@ -12,5 +12,8 @@ public class Main {
         bs.sort(a);
         bs.sort1(a);
         bs.sort2(a);
+
+        SelectionSort ss = new SelectionSort();
+        ss.sort(a);
     }
 }
