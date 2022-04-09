@@ -30,6 +30,8 @@ https://www.youtube.com/watch?v=ltm-JX5R1pA
 
 1. 가지뻗기
 
+https://drive.google.com/file/d/1b8MAOL0gQ6B8nfskIFUKKOKTKo7s8RRU/view?usp=sharing
+
 ![image](https://user-images.githubusercontent.com/75921378/156899310-f64691f5-2ed0-43e9-89f2-2c824b2a3af4.png)
 
 
