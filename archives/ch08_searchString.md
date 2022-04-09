@@ -18,7 +18,7 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch08/B
 
 https://chanhuiseok.github.io/posts/algo-15/
 
-https://www.youtube.com/watch?v=yWWbLrV4PZ8&list=LL&index=1
+https://www.youtube.com/watch?v=UcjK_k5PLHI
 
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch08/KMP_1786.java
 
