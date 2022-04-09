@@ -16,7 +16,7 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch08/B
 
 3. kmp
 
-https://chanhuiseok.github.io/posts/algo-15/
+https://bowbowbow.tistory.com/6
 
 https://www.youtube.com/watch?v=UcjK_k5PLHI
 
