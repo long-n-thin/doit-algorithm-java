@@ -18,6 +18,8 @@ https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch08/B
 
 https://bowbowbow.tistory.com/6
 
+https://entwickler.tistory.com/6
+
 https://www.youtube.com/watch?v=UcjK_k5PLHI
 
 https://github.com/jchj108/doit-algorithm-java/blob/jichangjin/jichangjin/ch08/KMP_1786.java
