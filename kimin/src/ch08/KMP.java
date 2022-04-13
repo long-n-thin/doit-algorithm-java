@@ -33,4 +33,42 @@ public class KMP {
 
         return -1;
     }
+
+    public void search2(String txt, String pattern) {
+        int[] table = makeTable(pattern);
+        int tlen = txt.length();
+        int plen = pattern.length();
+        int j = 0;
+
+        for (int i = 0; i < tlen; i++) {
+            while (j > 0 && txt.charAt(i) != pattern.charAt(j)) {
+                j = table[j - 1];
+            }
+            if (txt.charAt(i) == pattern.charAt(j)) {
+                if (j == plen - 1) {
+                    System.out.println(i - plen + 2 + "에서 찾음");
+                    j = table[j];
+                } else {
+                    j++;
+                }
+            }
+        }
+    }
+
+    private int[] makeTable(String pattern) {
+        int[] table = new int[pattern.length()];
+        int j = 0;
+
+        for (int i = 1; i < pattern.length(); i++) {
+            while (j > 0 && pattern.charAt(i) != pattern.charAt(j)) {
+                j = table[j - 1];
+            }
+
+            if (pattern.charAt(i) == pattern.charAt(j)) {
+                table[i] = ++j;
+            }
+        }
+
+        return table;
+    }
 }

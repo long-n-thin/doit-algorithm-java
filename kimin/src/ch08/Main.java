@@ -12,9 +12,10 @@ public class Main {
         int kmpIndex = kmp.search(s, pattern);
         int bmIndex = bm.search(s, pattern);
 
-        printStringSearchResult(s, pattern, bfIndex);
+        kmp.search2(s, pattern);
+//        printStringSearchResult(s, pattern, bfIndex);
         printStringSearchResult(s, pattern, kmpIndex);
-        printStringSearchResult(s, pattern, bmIndex);
+//        printStringSearchResult(s, pattern, bmIndex);
     }
 
     static void printStringSearchResult(String s, String pattern, int index) {
