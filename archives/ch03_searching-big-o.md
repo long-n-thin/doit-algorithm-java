@@ -78,7 +78,7 @@ best <= Big-Ω <= Big-Θ <= Big-O <= worst
 - 빅오 표기를 보면 알고리즘 계산 시간을 직관적으로 이해할 수 있다.
 - 상수항과 지배적이지 않은 항 무시하기
   - O(n+2) => O(n)
-  - O(n^2+n) => O(n^2)
+  - O(n<sup>2</sup>+n) => O(n<sup>2</sup>)
 
 #### 알고리즘 계산: 더하기 vs 곱하기
 
@@ -105,14 +105,14 @@ for (int a : arrA) {
 | O(log n) | logarithmic | 이진 검색 |
 | O(n) | linear | 선형 검색 |
 | O(n lon n) | linearithmic | 퀵 정렬, Heap 정렬 |
-| O(n^2) | quadratic | 삽입 정렬, 선택 정렬, 이중 for문 |
+| O(n<sup>2</sup>) | quadratic | 삽입 정렬, 선택 정렬, 이중 for문 |
 | O(n!) | exponential | 이중 재귀 |
 
 ### 공간 복잡도(Space Complexity)
 
 - 프로그램 실행시 실제 사용되는 메모리 공간의 양
 - 크기가 n인 배열은 O(n) 공간 필요
-- 크기가 n*n인 2차원 배열은 O(n^2) 공간 필요
+- 크기가 n*n인 2차원 배열은 O(n<sup>2</sup>) 공간 필요
 
 #### 공간 복잡도 예시
 
