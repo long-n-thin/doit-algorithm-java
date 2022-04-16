@@ -17,6 +17,10 @@ public class Main {
             ll.add((i + 1) * 10);
         }
         ll.traverse();  // 현재 리스트 노드 인덱스와 값 출력
+        System.out.println(ll.search(30));  // 값이 있는 경우
+        System.out.println(ll.search(60));  // 값이 없는 경우
+        System.out.println(ll.searchAt(2));  // 인덱스가 범위 내
+        System.out.println(ll.searchAt(5));  // 인덱스가 범위 밖
 
         ll.remove(2);   // 2번 인덱스 노드 삭제
         ll.traverse();

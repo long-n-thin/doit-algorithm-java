@@ -105,6 +105,28 @@ public class LinkedList {
         return true;
     }
 
+    public int search(int val) {
+        if (isEmpty()) return -1;
+
+        Node node = head;
+        for (int i = 0; i < size; i++) {
+            if (node.val == val) return i;
+            node = node.next;
+        }
+
+        return -1;
+    }
+
+    public int searchAt(int index) {
+        if (isEmpty() || index >= size) return -1;
+
+        Node node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
+        }
+        return node.val;
+    }
+
     public void traverse() {
         if (isEmpty()) {
             System.out.println("Empty Linked List");
