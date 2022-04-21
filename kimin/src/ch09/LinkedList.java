@@ -10,8 +10,9 @@ public class LinkedList {
     }
 
     public LinkedList(int val) {
-        Node node = new Node(val, null);
+        Node node = new Node(val);
         head = tail = node;
+        node.next = node.prev = node;
         size++;
     }
 
@@ -19,50 +20,61 @@ public class LinkedList {
         return head == null;
     }
 
-    public void add(int val) {
-        if (isEmpty()) {    // 빈 리스트면 맨 앞에 추가
-            addFirst(val);
-        } else {    // 이미 노드가 있으면 마지막에 추가
-            addLast(val);
-        }
+    public boolean add(int val) {
+        addLast(val);
+        return true;
     }
 
-    public void add(int val, int position) {
-        if (position == 0) {
+    public void add(int val, int index) {
+        if (index == 0) {
             addFirst(val);
-        } else if (position >= size) {
+        } else if (index >= size) {
             addLast(val);
         } else {
-            Node temp = head;
-            for (int i = 0; i < position - 1; i++) {
-                temp = temp.next;
+            Node temp;
+            if (index < size /2) {
+                temp = head;
+                for (int i = 0; i < index - 1; i++) {
+                    temp = temp.next;
+                }
+            } else {
+                temp = tail;
+                for (int i = size; i > index; i--) {
+                    temp = temp.prev;
+                }
             }
             Node node = new Node(val);
             node.next = temp.next;
+            node.prev = temp;
+            temp.next.prev = node;
             temp.next = node;
             size++;
         }
     }
 
     public void addFirst(int val) {
+        Node node = new Node(val);
         if (isEmpty()) {
-            Node node = new Node(val, null);
             head = tail = node;
         } else {
-            head = new Node(val, head);
+            node.next = head;
+            node.prev = tail;
+            head = node.next.prev = node;
         }
         size++;
     }
 
     public void addLast(int val) {
+        Node node = new Node(val);
         if (isEmpty()) {
-            addFirst(val);
+            head = node;
         } else {
             Node last = tail;
-            Node node = new Node(val, null);
             last.next = node;
-            tail = node;
+            node.next = head;
+            node.prev = last;
         }
+        tail = node;
         size++;
     }
 
@@ -70,15 +82,25 @@ public class LinkedList {
         return removeFirst();
     }
 
-    public boolean remove(int position) {
-        if (isEmpty() || position >= size) return false;
-        if (position == 0) return removeFirst();
+    public boolean remove(int index) {
+        if (isEmpty() || index >= size) return false;
+        if (index == 0) return removeFirst();
+        if (index == size - 1) return removeLast();
 
-        Node node = head;
-        for (int i = 0; i < position - 1; i++) {
-            node = node.next;
+        Node node;
+        if (index < size / 2) {
+            node = head;
+            for (int i = 0; i < index - 1; i++) {
+                node = node.next;
+            }
+        } else {
+            node = tail;
+            for (int i = size; i > index; i--) {
+                node = node.prev;
+            }
         }
         node.next = node.next.next;
+        node.next.prev = node;
         size--;
 
         return true;
@@ -86,8 +108,13 @@ public class LinkedList {
 
     public boolean removeFirst() {
         if (isEmpty()) return false;
+        if (size == 1) {
+            clear();
+            return true;
+        }
 
         head = head.next;
+        head.prev = tail;
         size--;
         return true;
     }
@@ -95,12 +122,8 @@ public class LinkedList {
     public boolean removeLast() {
         if (isEmpty()) return false;
 
-        Node prev = head;
-        for (int i = 0; i < size - 2; i++) {
-            prev = prev.next;
-        }
-        tail = prev;
-        prev.next = null;
+        tail = tail.prev;
+        tail.next = head;
         size--;
         return true;
     }
@@ -117,12 +140,20 @@ public class LinkedList {
         return -1;
     }
 
-    public int searchAt(int index) {
+    public int get(int index) {
         if (isEmpty() || index >= size) return -1;
 
-        Node node = head;
-        for (int i = 0; i < index; i++) {
-            node = node.next;
+        Node node;
+        if (index < size / 2) {
+            node = head;
+            for (int i = 0; i < index; i++) {
+                node = node.next;
+            }
+        } else {
+            node = tail;
+            for (int i = size - 1; i > index; i--) {
+                node = node.prev;
+            }
         }
         return node.val;
     }
@@ -131,12 +162,58 @@ public class LinkedList {
         if (isEmpty()) {
             System.out.println("Empty Linked List");
         } else {
+            StringBuilder sb = new StringBuilder();
             Node node = head;
             for (int i = 0; i < size; i++) {
-                System.out.print("[" + i + "]" + node.val + "  ");
+                sb.append("[").append(i).append("]").append(node.val).append(' ');
                 node = node.next;
             }
-            System.out.println();
+            System.out.println(sb);
+        }
+    }
+
+    public void traverse(int start, int end) {
+        if (isEmpty()) {
+            System.out.println("Empty Linked List");
+        } else {
+            StringBuilder sb = new StringBuilder();
+            Node node;
+            int idx;
+            if (start < size / 2) {
+                node = head;
+                idx = 0;
+                for (int i = 0; i < start; i++) {
+                    node = node.next;
+                    idx++;
+                }
+            } else {
+                node = tail;
+                idx = size - 1;
+                for (int i = size - 1; i > start; i--) {
+                    node = node.prev;
+                    idx--;
+                }
+            }
+            for (int i = 0; i < end - start + 1; i++) {
+                sb.append('[').append(idx % size).append(']').append(node.val).append(' ');
+                node = node.next;
+                idx = ++idx % size;
+            }
+            System.out.println(sb);
+        }
+    }
+
+    public void traverseReverse() {
+        if (isEmpty()) {
+            System.out.println("Empty Linked List");
+        } else {
+            StringBuilder sb = new StringBuilder();
+            Node node = tail;
+            for (int i = size - 1; i >= 0; i--) {
+                sb.append('[').append(i).append(']').append(node.val).append(' ');
+                node = node.prev;
+            }
+            System.out.println(sb);
         }
     }
 
@@ -153,7 +230,7 @@ public class LinkedList {
 
         StringBuilder sb = new StringBuilder();
         Node node = head;
-        while (node != null) {
+        for (int i = 0; i < size; i++) {
             sb.append(node.val).append(' ');
             node = node.next;
         }
